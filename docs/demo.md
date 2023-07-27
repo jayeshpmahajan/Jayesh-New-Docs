@@ -265,18 +265,20 @@ Command: **sudo docker compose -f {compose-file.yml} up -d**
 3)	Multiple ports gets exposed like 9901,50051,50052(ledger-envoy) ,9902,40051,40052(scalar-envoy) and much more on that instance 
 
 
-    ##C. Registering Contracts/Functions To Scalar DL
+    ## C. Registering Contracts/Functions To Scalar DL
 
 We are using contracts and functions of ScalarDL. The functions are used in case scalarDB operation is successful and DL operation fails. We are keeping audit status as 3. But if DL operation fails, then control is lost. Initially, we are keeping audit status 3, and then after both the operations are successful, we change the status to 1 via the UpdateFunction.
 
-###Prerequisite:
+### Prerequisite:
 Please go through the links below before performing this step.
 
 https://github.com/scalar-labs/scalardl/blob/master/docs/how-to-write-contract.md
+
 https://github.com/scalar-labs/scalardl/blob/master/docs/how-to-write-function.md
+
 https://github.com/scalar-labs/scalardl/blob/master/docs/getting-started-auditor.md
 
-###Modify client.properties
+### Modify client.properties
 This file is being used by the application. We need to mention the client certificate path and key in this document. This is necessary for interacting with ScalarDL. The application is authenticated by DL, and the app can perform DL operations.
 
 The first thing you need to do is configure the Client SDK. The following sample properties are required properties for the Client SDK to interact with ScalarDL Ledger.
