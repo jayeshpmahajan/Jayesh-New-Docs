@@ -32,13 +32,13 @@ Installation of golang-cfssl:
 Cmd:   sudo apt install golang-cfssl 
 
 Execution of docker-compose-cfssl.yml file:
-docker compose -f docker-compose-cfssl.yml up
+CMD: docker compose -f docker-compose-cfssl.yml up
 
-The docker-compose-cfssl.yml file contains configurations for three Docker images:
+The file docker-compose-cfssl.yml is created by us and contains three images : 
 
-Service
-Init
-OCSP Serve
+- Service
+- Init
+- OCSP Serve
 
 This will set the environment for execution of commands required to create certificates.
 
@@ -68,6 +68,18 @@ client.pem
 We require three certificates - for ledger, auditor, and client (i.e application)
 
 Hence, the above commands are executed each for Ledger and Auditor. The name of the key is changed from ‘client’ to ‘ledger’ in case of Ledger certificate and is changed from ‘ client’ to auditor’ in case of Auditor certificate.
+
+## B.	Registration of certificates between Ledger and Auditor 
+
+It is necessary to register a Ledger certificate with Auditor and Auditor certificate with Ledger.
+The following steps are performed in order to complete registration.
+
+-	Modify the compose file (docker-compose-ledger-auditor.yml) to initialize the Ledger and Auditor DBs.  
+Please note that we have already provided a modified version of the compose file which can be directly used if you are using ScalarDL with MySQL.
+
+-	Update scalardb-ledger.properties file and  scalardb-auditor.properties file for loading the ledger and auditor schemas.
+
+-	Run the Compose files. The Ledger and Auditor Schemas are loaded in this process.
 
 
 
