@@ -43,6 +43,16 @@ OCSP Serve
 
 This will set the environment for execution of commands required to create certificates.
 
+The following commands are used to generate and sign a certificate using `openssl` and `cfssl` for the client application:
+
+```bash
+$ openssl ecparam -name prime256v1 -out prime256v1.pem
+$ openssl req -new -newkey ec:prime256v1.pem -nodes -keyout client-key.pem.pkcs8 -out client.csr
+$ openssl ec -in client-key.pem.pkcs8 -out client-key.pem
+
+$ cfssl sign -remote "localhost:8888" -profile "client" client.csr | cfssljson -bare client -
+
+
 
 
 
