@@ -103,7 +103,7 @@ Before running the compose files, it is required to add the necessary details fo
 
 >  The JDBC URL
 
-    scalar.db.contact_points=jdbc:mysql://mysql_container_forLedger:3306/
+    #ffffff scalar.db.contact_points=jdbc:mysql://mysql_container_forLedger:3306/
 
 >  The username and password
 
