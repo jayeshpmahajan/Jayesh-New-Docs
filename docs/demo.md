@@ -461,6 +461,71 @@ contract-class-file:  		mention classpath
          function-binary-name = "com.perceptproject.ScalarDBFileManagement.functions.Update"
          function-class-file ="build/classes/java/main/com/perceptproject/ScalarDBFileManagement/functions/Update.clas"
 
+4.	Create a ‘register’ file as below.
+
+        #!/bin/bash
+        ${SCALAR_SDK_HOME}/client/bin/register-cert --properties 
+        ./client.properties
+        ${SCALAR_SDK_HOME}/client/bin/register-contracts --properties ./client.properties --contracts-file ./path/to/contracts.toml
+        ${SCALAR_SDK_HOME}/client/bin/register-functions --properties ./client.properties --functions-file ./path/to/functions.toml
+
+The contracts, functions and certificates to be registered are mentioned in the above file
+
+Note:  SCALAR_SDK_HOME is the path of Project, which has client sdk, client.properties.
+
+The parameters to be assigned in the above file are:
+
+### /register-cert : 	
+It will register the certificate of client (i.e application)
+### /register-contracts: 	
+provide a contract/list of contracts in a file such as contracts.toml and the client certificate to get register the contracts.
+### /register-functions:	
+provide a function/list of contracts in a file such as functions.toml and the client properties file to get register functions.
+
+5.	Execute the File using the below statement.
+
+        $ SCALAR_SDK_HOME=/mnt/d/GitWorkSpacePercept/ScalarDB-FileManagementGit/percept/ScalarDB-FileManagement ./register
+
+
+Refer:
+Writing contracts: ‘https://github.com/scalar-labs/scalardl/blob/master/docs/how-to-write-contract.md’
+
+ 
+## B. Functions used in application
+
+### 1)	update-function
+
+This function is written to access ScalarDB by ScalarDL during a ScalarDL transaction.
+
+The fault detectable data record must be created in ScalarDL. Sometimes, it might be possible that a data transaction is successful in ScalarDB and has failed in ScalarDL. Thus the fault detectable data record is not present in ScalarDL. 
+In such a case, a different status is assigned to the file so that the missed record could be rewritten in ScalarDL again. This status is managed in ScalarDB and is to be written during the ScalarDL transaction. Hence, a function is written to handle this problem.
+
+Reference: 
+https://github.com/scalar-labs/scalardl/blob/master/docs/how-to-write-function.md
+
+
+### 4. Service used by the application to interact with ScalarDL
+
+Application used the below service to interact with scalatDL - connect bin
+
+To Execute the Client we are using ClientService
+
+    @Bean
+    public ClientService getService() {
+        ClientServiceFactory factory = new ClientServiceFactory();
+
+        ClientService service = null;
+        try {
+            log.info("Creating bean ..");
+            service = factory.create(new ClientConfig(new   File(Constants.CLIENT_PROPERTIES)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return service;
+    }
+    //
+
+
 
 
 
