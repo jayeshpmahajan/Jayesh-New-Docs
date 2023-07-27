@@ -349,29 +349,29 @@ The first thing you need to do is configure the Client SDK. The following sample
     scalar.dl.client.auditor.linearizable_validation.contract_id= 
 
 
-3. Writing Contracts and Functions as Required by the Application
+## 3. Writing Contracts and Functions as Required by the Application
 We are using contracts and functions in this application. The Contracts are used to manage data in ScalarDL, and functions are used when we are accessing ScalarDB from ScalarDL.
 
-## A. Contracts Used in Application
+### A. Contracts Used in Application
 The contracts created and used in the application are:
 
 1) Get-all-age
 
-    -Get a list of ages for a given asset ID.
+    - Get a list of ages for a given asset ID.
 2) Get-asset
 
-    -Get JSON data for a given asset ID and age.
+    - Get JSON data for a given asset ID and age.
 3) Add-item
 
-    -To add items in ScalarDL, only files which are added in the BFD folder.
-    -This contract is used when a file asset entry is to be added to ScalarDL.
+    - To add items in ScalarDL, only files which are added in the BFD folder.
+    - This contract is used when a file asset entry is to be added to ScalarDL.
 4) Update-item
 
-    -Rename, update file, delete operations call this contract.
-    -The file data in the JSON is modified based on the operation.
+    - Rename, update file, delete operations call this contract.
+    - The file data in the JSON is modified based on the operation.
 5) Validate-ledger
 
-    -Modified existing Validate contract.
+    - Modified existing Validate contract.
 
 
 
