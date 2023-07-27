@@ -434,6 +434,31 @@ https://github.com/scalar-labs/scalardl-java-client-sdk/blob/master/src/main/jav
     }
 
 
+### Process to setup the contracts
+
+1.	Create a folder such as ‘config’ in the project and place the client.pem, client-key.pem
+
+2.	Then create contracts.toml to mention all contract-id, contract-binary-name, contract-class-file
+
+### Ex
+    [[contracts]]
+    contract-id = "get-all-age"
+    contract-binary-name = "com.perceptproject.ScalarDBFileManagement.contracts.GetAllAge"
+    contract-class-file = "build/classes/java/main/com/perceptproject/ScalarDBFileManagement/contracts/GetAllAge.class"
+
+Explanation: 
+
+contract-id : 			name of contract, 
+contract-binary-name :	mention binary name,
+contract-class-file:  		mention classpath
+
+### 3.	If there are functions in your applications,  create functions.toml
+
+         [[functions]]
+         function-id ="update-function"
+         function-binary-name = "com.perceptproject.ScalarDBFileManagement.functions.Update"
+         function-class-file ="build/classes/java/main/com/perceptproject/ScalarDBFileManagement/functions/Update.clas"
+
 
 
 
