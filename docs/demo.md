@@ -55,6 +55,16 @@ $ openssl ec -in client-key.pem.pkcs8 -out client-key.pem
 $ cfssl sign -remote "localhost:8888" -profile "client" client.csr | cfssljson -bare client -
 
 
+The above process creates client.pem which is a certificate for client application.
+After Running this command the files created are listed as below:
+
+$ ls -l
+client-cert.json
+client-key.pem
+client.csr
+client.pem
+
+
 
 
 
