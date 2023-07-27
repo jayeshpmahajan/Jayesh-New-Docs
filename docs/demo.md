@@ -42,7 +42,7 @@ OCSP Serve
 
 This will set the environment for execution of commands required to create certificates.
 
-## A. Creation of Certificates for Ledger, Auditor, and Client Application
+**A. Creation of Certificates for Ledger, Auditor, and Client Application**
 
 These certificates are required to establish a communication in a secure way between a client application, Ledger, and Auditor of Scalar DL.
 Following commands are executed to create certificates:
