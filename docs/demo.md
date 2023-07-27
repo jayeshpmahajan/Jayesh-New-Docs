@@ -373,6 +373,19 @@ The contracts created and used in the application are:
 
   - Modified existing Validate contract.
 
+Validate-ledger Contract
+The application mainly aims at detecting a fault in case of a BFD file.
+
+The application user can select a BFD file and click on the validate button to check if the file is tampered. If validation fails i.e. ledger and auditor data not in sync, the file is shown with a different icon.
+
+ScalarDL provides a contract to validate the data. In the File Manager application, the file records are updated in Ledger and Auditor and the File Operation history is recorded in Ledger and Auditor. Every update, delete, rename operation performed on a file is recorded in Ledger as well as Auditor and the ‘age’ of that Asset is updated.
+
+In order to be able to detect a fault at the ‘age’ level, we have modified the existing ‘Vaildate’ contract and written a few other contracts.
+
+Reference:
+https://github.com/scalar-labs/scalardl-java-client-sdk/blob/master/src/main/java/com/scalar/dl/client/contract/ValidateLedger.java
+
+
 
 
 
