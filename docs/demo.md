@@ -251,10 +251,11 @@ Hence , mysql and mysql1
 **Note:**
 Check the statement
 
-    ./ledger.properties:/scalar/ledger/ledger.properties
-in the docker-compose-ledger-auditor.yml which is provided along with the documentation. This statement is actually added to override the existing ledger.properties.
+ ./ledger.properties:/scalar/ledger/ledger.properties
+in the docker-compose-ledger-auditor.yml  which is provided along with the documentation. This statement is actually added to override existing ledger.properties.
 
-    In case, ScalarDL and ScalarDB are not used together in the application (in other words, not using Functions in the application), then it is required to remove this statement from the docker-compose-ledger-auditor.yml file.
+In case, ScalarDL and ScalarDB are not used together in the application (  in other words, not using Functions in the application) then it is required to remove this statement from the  docker-compose-ledger-auditor.yml file.
+
 
 
 
