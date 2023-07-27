@@ -290,10 +290,10 @@ The first thing you need to do is configure the Client SDK. The following sample
 >  specified.
 >  It assumes that there is a single endpoint that is given by DNS or a load balancer.
 
-scalar.dl.client.server.host=localhost
+   scalar.dl.client.server.host=localhost
 >  Optional. A port number of the server. Use 50051 by default if not specified.
 
-scalar.dl.client.server.port=50051
+   scalar.dl.client.server.port=50051
 
 >  Optional. A port number of the server for privileged services. Use 50052 by default if not specified.
 >  scalar.dl.client.server.privileged_port=50052
@@ -301,7 +301,7 @@ scalar.dl.client.server.port=50051
 >  Required. The holder ID of a certificate.
 >  It must be configured for each private key and unique in the system.
 
-scalar.dl.client.cert_holder_id=client
+   scalar.dl.client.cert_holder_id=client
 
 >  Optional. The version of the certificate. Use 1 by default if not specified.
 >  Use another bigger integer if you need to change your private key.
@@ -309,17 +309,17 @@ scalar.dl.client.cert_holder_id=client
 
 >  Required. The path of the certificate file.
 
-scalar.dl.client.cert_path=/path/to/client.pem
+   scalar.dl.client.cert_path=/path/to/client.pem
 
 >  Required. The path of a corresponding private key file to the certificate.
 >  Exceptionally it can be empty in some requests to privileged services
 >  such as registerCertificate and registerFunction since they don't need a signature.
 
-scalar.dl.client.private_key_path=/path/to/client-key.pem
+   scalar.dl.client.private_key_path=/path/to/client-key.pem
 
 >  Optional. A flag to enable TLS communication. False by default.
 
-scalar.dl.client.tls.enabled=false
+   scalar.dl.client.tls.enabled=false
 
 >  Optional. A custom CA root certificate for TLS communication.
 >  If the issuing certificate authority is known to the client, it can be empty.
@@ -332,10 +332,10 @@ scalar.dl.client.tls.enabled=false
 >  Experimental. Proxy server
 > scalar.dl.client.proxy.server=localhost:10051
 
-scalar.dl.client.auditor.enabled=true
-scalar.dl.client.auditor.host=localhost
+   scalar.dl.client.auditor.enabled=true
+   scalar.dl.client.auditor.host=localhost
 
-scalar.dl.client.auditor.linearizable_validation.contract_id=validate-ledger-1
+   scalar.dl.client.auditor.linearizable_validation.contract_id=validate-ledger-1
 
 
 
