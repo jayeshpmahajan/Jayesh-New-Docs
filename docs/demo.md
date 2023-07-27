@@ -454,7 +454,7 @@ contract-binary-name :	mention binary name,
 
 contract-class-file:  		mention classpath
 
-### 3.	If there are functions in your applications,  create functions.toml
+3.	If there are functions in your applications,  create functions.toml
 
          [[functions]]
          function-id ="update-function"
