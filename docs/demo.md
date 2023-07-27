@@ -337,6 +337,19 @@ The first thing you need to do is configure the Client SDK. The following sample
 
     scalar.dl.client.auditor.linearizable_validation.contract_id=validate-ledger-1
 
+ 
+### As indicated above, the following properties are mentioned.
+
+    scalar.dl.client.server.host, 
+    scalar.dl.client.cert_holder_id,
+    scalar.dl.client.cert_path,
+    scalar.dl.client.private_key_path,
+    scalar.dl.client.auditor.enabled=true
+    scalar.dl.client.auditor.host=localhost
+    scalar.dl.client.auditor.linearizable_validation.contract_id= 
+ 
+
+
 
 
 
