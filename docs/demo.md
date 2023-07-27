@@ -81,6 +81,12 @@ Please note that we have already provided a modified version of the compose file
 
 -	Run the Compose files. The Ledger and Auditor Schemas are loaded in this process.
 
+Note:
+
+Refer to the Compose File docker-compose-ledger-auditor.yml in the shared folder - ScalarDL withMySQL Reference.
+MySQL DB is used for Ledger & Auditor.
+It is assumed that you have generated certificates for Ledger and Auditor and kept them in the fixture folder inside 'ScalarDL withMySQL Reference'.
+
 
 
 
