@@ -101,13 +101,14 @@ Before running the compose files, it is required to add the necessary details fo
    1)	Update `scalardb-ledger.properties` file for Loading ledger schema in Ledger(DB)
 
 >  The JDBC URL
-scalar.db.contact_points=jdbc:mysql://mysql_container_forLedger:3306/
+   scalar.db.contact_points=jdbc:mysql://mysql_container_forLedger:3306/
+
 >  The username and password
-scalar.db.username=root
-scalar.db.password=root
-> scalar.db.password=root
+   scalar.db.username=root
+   scalar.db.password=root
+
 >  JDBC storage implementation
-scalar.db.storage=jdbc
+   scalar.db.storage=jdbc
 
 
 
