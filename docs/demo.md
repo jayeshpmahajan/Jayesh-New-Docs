@@ -134,7 +134,13 @@ Before running the compose files, it is required to add the necessary details fo
 
 If the application is designed to use both ScalarDB as well as ScalarDL or more specifically, if ScalarDL functions are used in the application then it is required to update ledger.properties file and then override the existing  ledger.properties in the below image:
        
-    `ghcr.io/scalar-labs/scalar-ledger:3.6.0`
+   `ghcr.io/scalar-labs/scalar-ledger:3.6.0`
+
+
+##**ledger.properties file
+
+Note: The part written in red color in the below file is added for multi storage databases and for using Functions.
+
 
 
 
