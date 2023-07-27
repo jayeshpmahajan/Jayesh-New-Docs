@@ -357,21 +357,21 @@ The contracts created and used in the application are:
 
 1) Get-all-age
 
-- Get a list of ages for a given asset ID.
+  -  Get a list of ages for a given asset ID.
 2) Get-asset
 
-- Get JSON data for a given asset ID and age.
+  -  Get JSON data for a given asset ID and age.
 3) Add-item
 
-- To add items in ScalarDL, only files which are added in the BFD folder.
-- This contract is used when a file asset entry is to be added to ScalarDL.
+  - To add items in ScalarDL, only files which are added in the BFD folder.
+  - This contract is used when a file asset entry is to be added to ScalarDL.
 4) Update-item
 
-- Rename, update file, delete operations call this contract.
-    - The file data in the JSON is modified based on the operation.
+  - Rename, update file, delete operations call this contract.
+  - The file data in the JSON is modified based on the operation.
 5) Validate-ledger
 
-- Modified existing Validate contract.
+  - Modified existing Validate contract.
 
 
 
