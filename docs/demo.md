@@ -239,12 +239,25 @@ The updates required in ledger.properties file are as below:
 
 As we are using functions to access ScalarDb, the scalarDB instance details need to be configured in ledger.properties file.
 Hence , mysql and mysql1
-1)	We have to mention two configurations for MySQL ( one for Default ScalarDL Ledger & another for ScalarDb (which you are using in the application ))
-2)	Change the username, password, and contact_points accordingly 
-3)	Mention the schemaName and storage name respectively in the ‘scalar.db.multi_storage.namespace_mapping’ property.
-Eg. 
-coordinator:mysql1  (This mapping signifies to use coordinator schema from MySQL1 configuration)
-4)	Set the default MySQL storage in the property scalar.db.multi_storage.default_storage  Note that in the above configuration,  ‘MySQL1’ is the default storage.
+  1)  We have to mention two configurations for MySQL ( one for Default ScalarDL Ledger & another for ScalarDb (which you are using in the 
+      application ))
+  2)	Change the username, password, and contact_points accordingly 
+  3)	Mention the schemaName and storage name respectively in the ‘scalar.db.multi_storage.namespace_mapping’ property.
+      Eg. 
+     coordinator:mysql1  (This mapping signifies to use coordinator schema from MySQL1 configuration)
+  4)	Set the default MySQL storage in the property scalar.db.multi_storage.default_storage  Note that in the above configuration,  ‘MySQL1’ is 
+     the default storage.
+
+**Note:**
+Check the statement
+
+    ./ledger.properties:/scalar/ledger/ledger.properties
+in the docker-compose-ledger-auditor.yml which is provided along with the documentation. This statement is actually added to override the existing ledger.properties.
+
+    In case, ScalarDL and ScalarDB are not used together in the application (in other words, not using Functions in the application), then it is required to remove this statement from the docker-compose-ledger-auditor.yml file.
+
+
+
 
 
 
