@@ -283,7 +283,8 @@ This file is being used by the application. We need to mention the client certif
 
 The first thing you need to do is configure the Client SDK. The following sample properties are required properties for the Client SDK to interact with ScalarDL Ledger.
 
-## Refer: https://github.com/scalar-labs/scalardl/blob/master/docs/getting-started.md#configure-properties
+## Refer: 
+   https://github.com/scalar-labs/scalardl/blob/master/docs/getting-started.md#configure-properties
 
 
 
