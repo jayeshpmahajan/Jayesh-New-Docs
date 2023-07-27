@@ -130,6 +130,11 @@ Before running the compose files, it is required to add the necessary details fo
 
     scalar.db.storage=jdbc
 
+   3)	Changes required in ledger.properties file for using ScalarDL Functions 
+
+If the application is designed to use both ScalarDB as well as ScalarDL or more specifically, if ScalarDL functions are used in the application then it is required to update ledger.properties file and then override the existing  ledger.properties in the below image:
+
+
 
 
 
