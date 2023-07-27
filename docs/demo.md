@@ -56,13 +56,19 @@ $ cfssl sign -remote "localhost:8888" -profile "client" client.csr | cfssljson -
 ```
 
 The above process creates client.pem which is a certificate for client application.
-After Running this command the files created are listed as below:
 
+After Running this command the files created are listed as below:
+```bash
 $ ls -l
 client-cert.json
 client-key.pem
 client.csr
 client.pem
+```
+We require three certificates - for ledger, auditor, and client (i.e application)
+
+Hence, the above commands are executed each for Ledger and Auditor. The name of the key is changed from ‘client’ to ‘ledger’ in case of Ledger certificate and is changed from ‘ client’ to auditor’ in case of Auditor certificate.
+
 
 
 
