@@ -387,6 +387,53 @@ Reference:
 https://github.com/scalar-labs/scalardl-java-client-sdk/blob/master/src/main/java/com/scalar/dl/client/contract/ValidateLedger.java
 
 
+Validate-ledger contract in the application
+
+public class Validator extends JacksonBasedContract {
+
+    static final String ASSET_ID_KEY = "asset_id";
+    static final String AGE_KEY = "age";
+    static final String START_AGE_KEY = "start_age";
+    static final String END_AGE_KEY = "end_age";
+    static final String DATA_KEY = "data";
+
+    @Nullable
+    @Override
+    public JsonNode invoke(Ledger<JsonNode> ledger, JsonNode argument, @Nullable JsonNode properties) {
+
+        if (!argument.has(ASSET_ID_KEY)) {
+            throw new ContractContextException("please set asset_id in the argument");
+        }
+
+        String assetId = argument.get(ASSET_ID_KEY).asText();
+
+        int startAge = 0;
+        int endAge = Integer.MAX_VALUE;
+        if (argument.has(AGE_KEY)) {
+            int age = argument.get(AGE_KEY).asInt();
+            startAge = age;
+            endAge = age;
+        } else {
+            if (argument.has(START_AGE_KEY)) {
+                startAge = argument.get(START_AGE_KEY).asInt();
+            }
+            if (argument.has(END_AGE_KEY)) {
+                endAge = argument.get(END_AGE_KEY).asInt();
+            }
+        }
+        AssetFilter filter =
+                new AssetFilter(assetId)
+                        .withStartAge(startAge, true)
+                        .withEndAge(endAge, true)
+                        .withAgeOrder(AssetFilter.AgeOrder.ASC);
+        List<Asset<JsonNode>> assets = ledger.scan(filter);
+        return null;
+    }
+
+}
+
+
+
 
 
 
