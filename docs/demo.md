@@ -374,6 +374,7 @@ The contracts created and used in the application are:
   - Modified existing Validate contract.
 
 Validate-ledger Contract
+
 The application mainly aims at detecting a fault in case of a BFD file.
 
 The application user can select a BFD file and click on the validate button to check if the file is tampered. If validation fails i.e. ledger and auditor data not in sync, the file is shown with a different icon.
