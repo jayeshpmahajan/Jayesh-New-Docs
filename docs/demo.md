@@ -1,18 +1,3 @@
-Overview
-This document describes the steps while implementing ScalarDL in the File Manager Application.
-File Manager application is an application which manages files and folders along with Byzantine Fault Detection. The important files are managed by using ScalarDL as a middleware between MySQL database and File Manager application.
-
-The file related details are stored as an asset in ScalarDL Ledger as well as Auditor and thus, in case there is any inconsistency in any one of them, fault can be detected by the system.
-
-The important processes are as below:
-
-1.	ScalarDL installation and setup
-2.	Setup ScalarDL ledger and auditor
-a.	Creation of ledger, auditor and client application certificates
-b.	Registration of certificates between ledger and auditor
-c.	Registering contracts and functions to ScalarDL
-3.	Writing contracts and functions as required by the application
-
 
 # Overview
 
