@@ -95,7 +95,8 @@ _It is required to modify the `docker-compose-ledger-auditor.yml` file to initia
 _Please note that we have already provided a modified version of the compose file which can be directly used if you are using ScalarDL with MySQL._
 
 **Update `scalardb-ledger.properties` and `scalardb-auditor.properties` file**
-_Before running the compose files, it is required to add the necessary details for loading ledger and auditor schemas in the respective properties files.
+
+Before running the compose files, it is required to add the necessary details for loading ledger and auditor schemas in the respective properties files.
 
 1)	Update `scalardb-ledger.properties` file for Loading ledger schema in Ledger(DB)
 
