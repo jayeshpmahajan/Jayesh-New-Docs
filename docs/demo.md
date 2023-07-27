@@ -20,7 +20,6 @@ The file related details are stored as an asset in ScalarDL Ledger as well as Au
 3. **Writing Contracts and Functions as required by the application**
 
 
-
 1. ScalarDL Installation
 Refer: https://github.com/scalar-labs/scalardl/blob/master/docs/installation-with-docker.md
 
@@ -43,7 +42,10 @@ OCSP Serve
 
 This will set the environment for execution of commands required to create certificates.
 
-The following commands are used to generate and sign a certificate using `openssl` and `cfssl` for the client application:
+## A. Creation of Certificates for Ledger, Auditor, and Client Application
+
+These certificates are required to establish a communication in a secure way between a client application, Ledger, and Auditor of Scalar DL.
+Following commands are executed to create certificates:
 
 ```bash
 $ openssl ecparam -name prime256v1 -out prime256v1.pem
