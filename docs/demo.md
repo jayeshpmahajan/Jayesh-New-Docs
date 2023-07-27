@@ -387,9 +387,10 @@ Reference:
 https://github.com/scalar-labs/scalardl-java-client-sdk/blob/master/src/main/java/com/scalar/dl/client/contract/ValidateLedger.java
 
 
-Validate-ledger contract in the application
+ 
+### Validate-ledger contract in the application
 
-public class Validator extends JacksonBasedContract {
+    public class Validator extends JacksonBasedContract {
 
     static final String ASSET_ID_KEY = "asset_id";
     static final String AGE_KEY = "age";
@@ -430,7 +431,7 @@ public class Validator extends JacksonBasedContract {
         return null;
     }
 
-}
+    }
 
 
 
