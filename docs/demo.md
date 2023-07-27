@@ -256,8 +256,8 @@ in the docker-compose-ledger-auditor.yml  which is provided along with the docum
 
 In case, ScalarDL and ScalarDB are not used together in the application (  in other words, not using Functions in the application) then it is required to remove this statement from the  docker-compose-ledger-auditor.yml file.
 
-# Run Scalar DL Compose File 
-Command: ** sudo docker compose -f {compose-file.yml} up -d **
+## Run Scalar DL Compose File 
+Command: **sudo docker compose -f {compose-file.yml} up -d**
 
 **Result:**
 1)	Ledger and auditor certificates have been registered with each other. So the ledger and auditor can talk.
