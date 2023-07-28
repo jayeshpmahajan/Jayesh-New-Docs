@@ -234,8 +234,8 @@ Note: The part written in red color in the below file is added for multi storage
 > This must be enabled when using JdbcTransactionManager as the transaction manager of Scalar DB.
 
     scalar.dl.ledger.tx_state_management.enabled=
-```diff
-- For database
+ <span style="color:orange;">For database</span>
+
 
      scalar.db.storage=multi-storage
      scalar.db.multi_storage.storages=mysql,mysql1
@@ -252,7 +252,7 @@ Note: The part written in red color in the below file is added for multi storage
      scalar.db.multi_storage.storages.mysql1.password={Your-Password}
      scalar.db.multi_storage.namespace_mapping=coordinator:mysql1,scalardb:mysql1,scalar_file_management:mysql1,scalar:mysql
      scalar.db.multi_storage.default_storage=mysql1
-```
+
 
 The updates required in ledger.properties file are as below:
 
