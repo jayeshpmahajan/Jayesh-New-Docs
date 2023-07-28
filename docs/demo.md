@@ -234,8 +234,8 @@ Note: The part written in red color in the below file is added for multi storage
 > This must be enabled when using JdbcTransactionManager as the transaction manager of Scalar DB.
 
     scalar.dl.ledger.tx_state_management.enabled=
+ $\color{green}{> For database}$
 
-> For database
 #
 
     scalar.db.storage=multi-storage
