@@ -235,8 +235,7 @@ Note: The part written in red color in the below file is added for multi storage
 
     scalar.dl.ledger.tx_state_management.enabled=
 
- <font color="green"> Some green text </font>
-
+For database
 
      scalar.db.storage=multi-storage
      scalar.db.multi_storage.storages=mysql,mysql1
